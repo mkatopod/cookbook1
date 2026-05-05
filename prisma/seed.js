@@ -74,7 +74,7 @@ async function main() {
         data: {
             title: "Classic Pancakes",
             instructions: "Mix flour, sugar, and baking powder, Add eggs and milk, Cook on griddle until golden brown, Serve with butter and syrup",
-            authorId: regularUser.id,
+            authorId: regularUser.user_id,
         },
     });
 
@@ -82,7 +82,7 @@ async function main() {
         data: {
             title: "Chocolate Cake",
             instructions: "Mix flour, sugar, and cocoa powder, Add eggs, milk, and vanilla extract, Bake at 350°F for 30 minutes, Cool and decorate as desired",
-            authorId: regularUser.id,
+            authorId: regularUser.user_id,
         },
     });
 
@@ -90,7 +90,7 @@ async function main() {
         data: {
             title: "Vegetable Omelette",
             instructions: "Beat 3 eggs with salt and pepper, Heat butter in pan, Pour eggs and add vegetables, Cook until set and fold in half",
-            authorId: regularUser.id,
+            authorId: regularUser.user_id,
         },
     });
 
@@ -99,7 +99,7 @@ async function main() {
         data: {
             title: "Pasta Carbonara",
             instructions: "Cook pasta until al dente, Fry bacon until crispy, Mix eggs with cheese, Combine pasta with bacon and egg mixture, Serve immediately",
-            authorId: admin.id,
+            authorId: admin.user_id,
         },
     });
 
@@ -107,7 +107,7 @@ async function main() {
         data: {
             title: "Tomato Garlic Pasta",
             instructions: "Heat olive oil in pan, Sauté garlic and tomatoes, Add salt and pepper to taste, Simmer for 15 minutes, Toss with cooked pasta",
-            authorId: admin.id,
+            authorId: admin.user_id,
         },
     });
 
@@ -120,42 +120,42 @@ async function main() {
         data: [ 
             //Pancakes ingredients
             //Flour, Sugar, Baking Powder, Eggs, Milk
-            { recipeId: recipe1.id, ingredientId: ingredients[0].id, category_type: "dry" }, 
-            { recipeId: recipe1.id, ingredientId: ingredients[1].id, category_type: "dry" }, 
-            { recipeId: recipe1.id, ingredientId: ingredients[2].id, category_type: "dry" }, 
-            { recipeId: recipe1.id, ingredientId: ingredients[4].id, category_type: "dairy" }, 
-            { recipeId: recipe1.id, ingredientId: ingredients[5].id, category_type: "dairy" }, 
+            { recipeId: recipe1.recipe_id, ingredientId: ingredients[0].ingredient_id, category_type: "dry" }, 
+            { recipeId: recipe1.recipe_id, ingredientId: ingredients[1].ingredient_id, category_type: "dry" }, 
+            { recipeId: recipe1.recipe_id, ingredientId: ingredients[2].ingredient_id, category_type: "dry" }, 
+            { recipeId: recipe1.recipe_id, ingredientId: ingredients[4].ingredient_id, category_type: "dairy" }, 
+            { recipeId: recipe1.recipe_id, ingredientId: ingredients[5].ingredient_id, category_type: "dairy" }, 
 
             //Cake ingredients
             //Flour, Sugar, Eggs, Milk, Vanilla
-            { recipeId: recipe2.id, ingredientId: ingredients[0].id, category_type: "dry" }, 
-            { recipeId: recipe2.id, ingredientId: ingredients[1].id, category_type: "dry" }, 
-            { recipeId: recipe2.id, ingredientId: ingredients[4].id, category_type: "dairy" }, 
-            { recipeId: recipe2.id, ingredientId: ingredients[5].id, category_type: "dairy" }, 
-            { recipeId: recipe2.id, ingredientId: ingredients[3].id, category_type: "flavoring" }, 
+            { recipeId: recipe2.recipe_id, ingredientId: ingredients[0].ingredient_id, category_type: "dry" }, 
+            { recipeId: recipe2.recipe_id, ingredientId: ingredients[1].ingredient_id, category_type: "dry" }, 
+            { recipeId: recipe2.recipe_id, ingredientId: ingredients[4].ingredient_id, category_type: "dairy" }, 
+            { recipeId: recipe2.recipe_id, ingredientId: ingredients[5].ingredient_id, category_type: "dairy" }, 
+            { recipeId: recipe2.recipe_id, ingredientId: ingredients[3].ingredient_id, category_type: "flavoring" }, 
 
             //Omelette ingredients
             //Eggs, Butter, Garlic, Tomato, Salt
-            { recipeId: recipe3.id, ingredientId: ingredients[4].id, category_type: "dairy" }, 
-            { recipeId: recipe3.id, ingredientId: ingredients[6].id, category_type: "dairy" }, 
-            { recipeId: recipe3.id, ingredientId: ingredients[9].id, category_type: "vegetable" }, 
-            { recipeId: recipe3.id, ingredientId: ingredients[10].id, category_type: "vegetable" }, 
-            { recipeId: recipe3.id, ingredientId: ingredients[12].id, category_type: "seasoning" }, 
+            { recipeId: recipe3.recipe_id, ingredientId: ingredients[4].ingredient_id, category_type: "dairy" }, 
+            { recipeId: recipe3.recipe_id, ingredientId: ingredients[6].ingredient_id, category_type: "dairy" }, 
+            { recipeId: recipe3.recipe_id, ingredientId: ingredients[9].ingredient_id, category_type: "vegetable" }, 
+            { recipeId: recipe3.recipe_id, ingredientId: ingredients[10].ingredient_id, category_type: "vegetable" }, 
+            { recipeId: recipe3.recipe_id, ingredientId: ingredients[12].ingredient_id, category_type: "seasoning" }, 
 
             //Pasta ingredients
             //Cheese, Eggs, Salt, Black Pepper
-            { recipeId: recipe4.id, ingredientId: ingredients[7].id, category_type: "protein" }, 
-            { recipeId: recipe4.id, ingredientId: ingredients[4].id, category_type: "dairy" },
-            { recipeId: recipe4.id, ingredientId: ingredients[12].id, category_type: "seasoning" }, 
-            { recipeId: recipe4.id, ingredientId: ingredients[13].id, category_type: "seasoning" }, 
+            { recipeId: recipe4.recipe_id, ingredientId: ingredients[7].ingredient_id, category_type: "protein" }, 
+            { recipeId: recipe4.recipe_id, ingredientId: ingredients[4].ingredient_id, category_type: "dairy" },
+            { recipeId: recipe4.recipe_id, ingredientId: ingredients[12].ingredient_id, category_type: "seasoning" }, 
+            { recipeId: recipe4.recipe_id, ingredientId: ingredients[13].ingredient_id, category_type: "seasoning" }, 
 
             //Tomato Garlic Pasta ingredients
             //Olive Oil, Garlic, Tomato, Salt, Black Pepper
-            { recipeId: recipe5.id, ingredientId: ingredients[8].id, category_type: "oil" }, 
-            { recipeId: recipe5.id, ingredientId: ingredients[9].id, category_type: "vegetable" }, 
-            { recipeId: recipe5.id, ingredientId: ingredients[10].id, category_type: "vegetable" }, 
-            { recipeId: recipe5.id, ingredientId: ingredients[12].id, category_type: "seasoning" }, 
-            { recipeId: recipe5.id, ingredientId: ingredients[13].id, category_type: "seasoning" }, 
+            { recipeId: recipe5.recipe_id, ingredientId: ingredients[8].ingredient_id, category_type: "oil" }, 
+            { recipeId: recipe5.recipe_id, ingredientId: ingredients[9].ingredient_id, category_type: "vegetable" }, 
+            { recipeId: recipe5.recipe_id, ingredientId: ingredients[10].ingredient_id, category_type: "vegetable" }, 
+            { recipeId: recipe5.recipe_id, ingredientId: ingredients[12].ingredient_id, category_type: "seasoning" }, 
+            { recipeId: recipe5.recipe_id, ingredientId: ingredients[13].ingredient_id, category_type: "seasoning" }, 
         ],
     });
     console.log(`Recipe ingredients linked`);
@@ -166,21 +166,21 @@ async function main() {
     const cookbook1 = await prisma.cookbook.create({
         data: {
             name: "Breakfast Dishes",
-            userId: regularUser.id,
+            userId: regularUser.user_id,
         },
     });
 
     const cookbook2 = await prisma.cookbook.create({
         data: {
             name: "Desserts & Sweet Treats",
-            userId: regularUser.id,
+            userId: regularUser.user_id,
         },
     });
 
     const cookbook3 = await prisma.cookbook.create({
         data: {
             name: "Quick Dinner Ideas",
-            userId: admin.id,
+            userId: admin.user_id,
         },
     });
 
@@ -193,17 +193,17 @@ async function main() {
         data: [
             //Breakfast Dishes (user)
             //Pancakes and Omelette
-            { cookbookId: cookbook1.id, recipeId: recipe1.id }, 
-            { cookbookId: cookbook1.id, recipeId: recipe3.id }, 
+            { cookbookId: cookbook1.cookbook_id, recipeId: recipe1.recipe_id }, 
+            { cookbookId: cookbook1.cookbook_id, recipeId: recipe3.recipe_id }, 
 
             //Desserts & Sweet Treats (user)
             //Cake only
-            { cookbookId: cookbook2.id, recipeId: recipe2.id }, 
+            { cookbookId: cookbook2.cookbook_id, recipeId: recipe2.recipe_id }, 
 
             //Quick Dinner Ideas (admin)
             //Carbonara and Tomato Garlic Pasta
-            { cookbookId: cookbook3.id, recipeId: recipe4.id }, 
-            { cookbookId: cookbook3.id, recipeId: recipe5.id }, 
+            { cookbookId: cookbook3.cookbook_id, recipeId: recipe4.recipe_id }, 
+            { cookbookId: cookbook3.cookbook_id, recipeId: recipe5.recipe_id }, 
         ],
     });
 
